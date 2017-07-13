@@ -402,7 +402,7 @@ TH_API void THNN_(Sigmoid_updateOutput)(
           THTensor *output);
 TH_API void THNN_(Sigmoid_updateGradInput)(
           THNNState *state,
-          THTensor *input,             // [OPTIONAL]
+          THTensor *input,
           THTensor *gradOutput,
           THTensor *gradInput,
           THTensor *output);
@@ -597,7 +597,7 @@ TH_API void THNN_(Tanh_updateOutput)(
           THTensor *output);
 TH_API void THNN_(Tanh_updateGradInput)(
           THNNState *state,
-          THTensor *input,             // [OPTIONAL]
+          THTensor *input,
           THTensor *gradOutput,
           THTensor *gradInput,
           THTensor *output);
