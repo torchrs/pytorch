@@ -105,6 +105,10 @@ void THMapAllocatorContext_free(THMapAllocatorContext *ctx)
 
 static void *_map_alloc(void* ctx_, ptrdiff_t size)
 {
+  if (size == 0) {
+    return NULL;
+  }
+
   THMapAllocatorContext *ctx = ctx_;
   void *data = NULL;
 
