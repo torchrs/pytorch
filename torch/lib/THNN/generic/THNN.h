@@ -1174,8 +1174,8 @@ TH_API void THNN_(SpatialUpSamplingBilinear_updateGradInput)(
 TH_API void THNN_(SpatialGridSamplerBilinear_updateOutput)(
 	  THNNState *state,
 	  THTensor *input,
-	  THTensor *grid,
-	  THTensor *output);
+       THTensor *output,
+	  THTensor *grid);
 
 TH_API void THNN_(SpatialGridSamplerBilinear_updateGradInput)(
 	  THNNState *state,

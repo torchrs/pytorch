@@ -36,8 +36,8 @@ static inline void THNN_(SpatialGridSamplerBilinear_shapeCheck)
 TH_API void THNN_(SpatialGridSamplerBilinear_updateOutput)(
 	  THNNState *state,
 	  THTensor *input,
-	  THTensor *grid,
-	  THTensor *output) {
+	  THTensor *output,
+	  THTensor *grid) {
 
   THNN_(SpatialGridSamplerBilinear_shapeCheck)(input, grid, NULL);
   int N = THTensor_(size)(input, 0);
