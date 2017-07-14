@@ -314,7 +314,7 @@ main_sources = [
     "torch/csrc/nn/THNN_generic.cpp",
 ]
 main_sources += split_types("torch/csrc/Tensor.cpp")
-
+main_sources = []
 try:
     import numpy as np
     include_dirs += [np.get_include()]
@@ -386,6 +386,7 @@ if WITH_CUDNN:
     ]
     extra_compile_args += ['-DWITH_CUDNN']
 
+main_sources = []
 if DEBUG:
     extra_compile_args += ['-O0', '-g']
     extra_link_args += ['-O0', '-g']
